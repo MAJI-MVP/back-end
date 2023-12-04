@@ -1,7 +1,40 @@
 # MAJI 
 ![23971701694604_ pic](https://github.com/MAJI-MVP/back-end/assets/125990317/43f47a5d-b6c5-4c3a-89c4-fe2a055f692f)
 
-**The key components of the POC (Proof-Of-Concept) we are building:**
+## FOR WEB3 CLOUD INFRASTRUCTURES PROVIDERS FUNCTIONALITY FOR FE:
+
+**1-Access the landing page of the Web3 Dapp**
+
+**2-Access the Subscription checkout builder helping them to Generate subscription revenue in seconds.**
+
+**3-Build your checkout and get paid cross-chain every second.**
+
+**4-Define your payment details and experiment with component styles.**
+
+**5-Export your creation with ease in the most convenient format and seamlessly integrate it into your platform.**
+
+**6-Customize and integrate your cross-chain checkout in minutes**
+
+**Start accepting crypto subscriptions in 3 easy steps. Customize your checkout widget, export it as JSON or publish it to IPFS for a hosted link, and integrate it into your platform.**
+
+i-Build widget: Customize every detail
+
+ii-Export: Select most convenient option
+
+iii-Integrate: Receive payment cross-chain second-by-second
+
+**7-Watch your revenue grow in real-time.**
+With a single transaction, your Web3 Subscriptions flow by the second into your wallet, reducing transaction costs and unlocking immediate capital availability.
+
+It will help Web3 cloud infrastructure providers grow their business with frictionless subscriptions.
+
+
+For the demo page, In as little as 3 clicks, users/customers can subscribe to their web3 product or service with money streams. Money streams flow in perpetuity, mitigating non-payment risk and reducing churn. 
+-Web interface and dashboard for the Web3 company to check all the checkouts created, with the amount collected and being collected, their status and details from each customer.
+
+**Web interface and dashboard for the customers to check the payments sent and being sent to the several buyers/suppliers with details and status**
+
+## The key components of the POC (Proof-Of-Concept) we are building:
 
 **AQUADUC Cross-chain streaming protocol:**
 A collection of persistent, non-upgradeable smart contracts that together create a protocol that facilitates the streaming of assets that enables to make and collect payments in streams from one chain to another chain per second/minute/hour/day/month/etc...
