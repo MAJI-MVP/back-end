@@ -153,12 +153,12 @@ yarn hardhat run scripts/04-deploy-sender.js --network polygonMumbai
     uint256 amount // cross-chain amount
  ```
 
-4. Chainlink Automation: Enter [chainlink Explorer](https://ccip.chain.link/) to create the Upkeep.
+4. Chainlink Automation: Enter [Chainlink Automation Register]([https://ccip.chain.link/](https://automation.chain.link/mumbai/91891732584567093379112087924008345583205370880517803548581144994370026233926)) to create the Upkeep.
    And choose Custom Logic, put in to SourceChainSender.sol address.
 
 5. Interact with SourceChainSender.sol, call createStream function.
    Check in Chainlink Automation Register copy transaction hash go to Chianlink Explorer.
 
 
- 6. Chainlink Explorer: Enter [chainlink Explorer](https://ccip.chain.link/) to view the cross-chain status
+ 6. Chainlink Explorer: Enter [Chainlink CCIP Explorer](https://ccip.chain.link/) to view the cross-chain status
     Go to the metamask copy ```Transaction ID ```
