@@ -1,1 +1,131 @@
+# MAJI 
+![23971701694604_ pic](https://github.com/MAJI-MVP/back-end/assets/125990317/43f47a5d-b6c5-4c3a-89c4-fe2a055f692f)
+
+**The key components of the POC (Proof-Of-Concept) we are building:**
+
+**AQUADUC Cross-chain streaming protocol:**
+A collection of persistent, non-upgradeable smart contracts that together create a protocol that facilitates the streaming of assets that enables to make and collect payments in streams from one chain to another chain per second/minute/hour/day/month/etc...
+
+**Cross-chain checkout builder Web interface**
+built with a collection of persistent, upgradeable smart contracts that together create a protocol that enables the Web3 business to create and personalize its cross-chain checkout in minutes and export it on the IPFS or as JSON file.
+
+**Web interface and dashboard for the Web3 company**
+to check all the checkout created, with the amount collected and being collected, and details from their customers.
+
+**Web interface and dashboard for the customers**
+to check the payments sent and being sent to the several buyers/suppliers
+
+For the back-end stack, we will use Solidity as programming language since we will build and deploy on EVM compatible chains such as the ones supported by Chainlink:
+
+Ethereum
+Polygon (Matic)
+Polygon zkEVM
+Avalanche
+
+**Our tech stack will comprise the following:**
+
+Chainlink CCIP
+Chainlink Automation
+Polygon - Polygon ID's Verifiable Credentials to preserve user privacy
+ENS
+The Graph
+
+**We can use Forge for solidity?**
+
+1- We can utilize ENS to help users select/attribute the domain name of the link of their cross-chain checkout while deploying on IPFS
+2- We will use Polygon ID in our dapp so our users can prove access rights to dapp features without giving up their private data. It means that users while on Polygon Network will be able to connect and use the dapp without giving up their private data to Web3 businesses. 
+
 ![Untitled-2023-12-02-2212](https://github.com/MAJI-MVP/back-end/assets/125990317/e1cd2d85-1203-438c-953a-93926d5041c1)
+
+# About
+
+## USDC TOKEN ADDRESS
+- Ethereum_Sepolia_LINK: 0x779877A7B0D9E8603169DdbD7836e478b4624789
+- Avalanche_Fuji_USDC: 0x5425890298aed601595a70AB815c96711a31Bc65
+
+## Polygon Mumbai -> Etherum Spolia USDC
+- Etherum_Spolia: 0xBA8F50375DBb23E39d6E6cEA711748beD65c162b LiquidityPool.sol
+- Polygon_Mumbai: 0x4B7061B17D44Fca27337414ad86a7C20E6a2F870 DestChainReceiver.sol
+- Polygon_Mumbai: 0x4eb8c2c39BF1baA0850BAb49eeF5A6D874E68b08 SourceChainSender.sol
+
+# Getting Started
+
+## Requirements
+
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
+- hardhat
+
+
+```
+git clone https://github.com/MAJI-MVP/back-end.git
+cd back-end
+yarn install
+```
+
+
+## Settings .env
+
+```
+SEPOLIA_RPC_URL=
+FUJI_RPC_URL=
+MUMBAI_RPC_URL=
+PRIVATE_KEY=
+SNOWTRACE_API_KEY=
+ETHERSCAN_API_KEY=
+POLYGONSCAN_API_KEY=
+```
+
+
+## Scripts
+
+For example, Polygon Mumbai -> Avalanche Fuji USDC:
+
+1. Deploy LiquidityPool.sol on Ethereum Sepolia
+
+```
+yarn hardhat run scripts/01-deploy-lp.js --network sepolia
+```
+
+2. Deploy DestChainReceiver.sol on Ethereum Sepolia
+
+```
+yarn hardhat run scripts/02-deploy-receiver.js --network sepolia
+```
+
+3. TransferOwnership from LiquidityPool.sol to DestChainReceiver.sol address on Ethereum Sepolia.
+   In order to ensure the security of the tokens in the LiquidityPool contract, we do not want anyone to be able to take away the tokens
+
+```
+yarn hardhat run scripts/03-transferowner.js --network sepolia  (Pass in the deployed DestChainReceiverAddress and liquidityPoolAddress)
+```
+
+4. Deploy SourceChainSender.sol on Polygon Mumbai
+
+```
+yarn hardhat run scripts/04-deploy-sender.js --network polygonMumbai
+```
+
+## Cross-chain 1 LINK
+1. Build a liquidity pool contract: The project direction is to charge the target chain lp contract with cross-chain ERC20 tokens, such as 1 LINK
+
+2. Pay the cross-chain fee: The project direction recharges the cross-chain fee to SourceChainSender.sol. Each cross-chain handling fee is approximately 0.3 LINK.
+
+3. Initiate cross-chain: transfer 1 LINK in Polygon Mumbai by calling the fund function in the SourceChainSender.sol contract(approve first).
+```
+    uint64 destinationChainSelector, // 0x554472a2720e5e7d5d3c817529aba05eed5f82d8
+    address receiver, // DestChainReceiver address
+    payFeesIn feeToken, // 1
+    address to, // user address
+    uint256 amount // cross-chain amount
+ ```
+
+4. Chainlink Automation: Enter [chainlink Explorer](https://ccip.chain.link/) to create the Upkeep.
+   And choose Custom Logic, put in to SourceChainSender.sol address.
+
+5. Interact with SourceChainSender.sol, call createStream function.
+   Check in Chainlink Automation Register copy transaction hash go to Chianlink Explorer.
+
+
+ 6. Chainlink Explorer: Enter [chainlink Explorer](https://ccip.chain.link/) to view the cross-chain status
+    Go to the metamask copy ```Transaction ID ```
