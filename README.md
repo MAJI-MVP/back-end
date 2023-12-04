@@ -78,7 +78,7 @@ The Graph
 
 ## Polygon Mumbai -> Etherum Spolia USDC
 - Etherum_Spolia: 0xBA8F50375DBb23E39d6E6cEA711748beD65c162b LiquidityPool.sol
-- Polygon_Mumbai: 0x4B7061B17D44Fca27337414ad86a7C20E6a2F870 DestChainReceiver.sol
+- Etherum_Spolia: 0x40a3D31Fe069F6Ca30CDfd8E0CA80c6946E34eb6 DestChainReceiver.sol
 - Polygon_Mumbai: 0x4eb8c2c39BF1baA0850BAb49eeF5A6D874E68b08 SourceChainSender.sol
 
 # Getting Started
