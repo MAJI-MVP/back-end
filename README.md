@@ -1,8 +1,12 @@
 # MAJI 
 ![23971701694604_ pic](https://github.com/MAJI-MVP/back-end/assets/125990317/43f47a5d-b6c5-4c3a-89c4-fe2a055f692f)
 
-## FOR WEB3 CLOUD INFRASTRUCTURES PROVIDERS FUNCTIONALITY FOR FE:
+## MAJI is a Cross-chain real-time Stripe for Web3. 
 
+**Real-time cross-chain subscriptions payments**
+A protocol that is a factory for any app to create cross-chain payment streaming and subscriptions. The creators can take funds from any chain - the subscribers can pay from any chain. We abstract all the complexities. 
+
+In particular, we focus on a very specific customer base. Cross-chain money streaming is an excellent use case for Web3 cloud infrastructure payments. Our team combines cross-chain usage-based pricing & real-time streaming to allow Web3 infrastructure providers to charge automatically by the second/hour/minute/month etc...
 **1-Access the landing page of the Web3 Dapp**
 
 **2-Access the Subscription checkout builder helping them to Generate subscription revenue in seconds.**
