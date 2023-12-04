@@ -1,8 +1,8 @@
 // imports
 const { run, network, getNamedAccounts, ethers } = require("hardhat")
 
-const liquidityPoolAddress = "0xa4064799b1BE7F708f1F75c44D863750f27A0a3E"
-const routerAddress = "0x554472a2720e5e7d5d3c817529aba05eed5f82d8"
+const liquidityPoolAddress = "0xBA8F50375DBb23E39d6E6cEA711748beD65c162b"
+const routerAddress = "0xd0daae2231e9cb96b94c8512223533293c3693bf"
 // You can change to the `LP contract address` and `Router address` you deployed
 
 // async main
@@ -20,7 +20,7 @@ async function main() {
     console.log(`Deployed contract to: ${destChainReceiver.address}`)
 
     // Verify contract
-    if (network.config.chainId === 43113 && process.env.SNOWTRACE_API_KEY) {
+    if (network.config.chainId === 11155111 && process.env.SNOWTRACE_API_KEY) {
         console.log("Waiting for block confirmations...")
         await destChainReceiver.deployTransaction.wait(3)
         await verify(destChainReceiver.address, [
