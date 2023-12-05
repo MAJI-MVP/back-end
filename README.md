@@ -3,10 +3,11 @@
 
 ## MAJI is a Cross-chain real-time Stripe for Web3. 
 
-**Real-time cross-chain subscriptions payments**
+**Real-time cross-chain subscription payments**
 A protocol that is a factory for any app to create cross-chain payment streaming and subscriptions. The creators can take funds from any chain - the subscribers can pay from any chain. We abstract all the complexities. 
 
 In particular, we focus on a very specific customer base. Cross-chain money streaming is an excellent use case for Web3 cloud infrastructure payments. Our team combines cross-chain usage-based pricing & real-time streaming to allow Web3 infrastructure providers to charge automatically by the second/hour/minute/month etc...
+
 **1-Access the landing page of the Web3 Dapp**
 
 **2-Access the Subscription checkout builder helping them to Generate subscription revenue in seconds.**
@@ -34,14 +35,14 @@ It will help Web3 cloud infrastructure providers grow their business with fricti
 
 
 For the demo page, In as little as 3 clicks, users/customers can subscribe to their web3 product or service with money streams. Money streams flow in perpetuity, mitigating non-payment risk and reducing churn. 
--Web interface and dashboard for the Web3 company to check all the checkouts created, with the amount collected and being collected, their status and details from each customer.
+-Web interface and dashboard for the Web3 company to check all the checkouts created, with the amount collected and being collected their status, and details from each customer.
 
 **Web interface and dashboard for the customers to check the payments sent and being sent to the several buyers/suppliers with details and status**
 
 ## The key components of the POC (Proof-Of-Concept) we are building:
 
 **AQUADUC Cross-chain streaming protocol:**
-A collection of persistent, non-upgradeable smart contracts that together create a protocol that facilitates the streaming of assets that enables to make and collect payments in streams from one chain to another chain per second/minute/hour/day/month/etc...
+A collection of persistent, non-upgradeable smart contracts that together create a protocol that facilitates the streaming of assets that enables one to make and collect payments in streams from one chain to another chain per second/minute/hour/day/month/etc...
 
 **Cross-chain checkout builder Web interface**
 built with a collection of persistent, upgradeable smart contracts that together create a protocol that enables the Web3 business to create and personalize its cross-chain checkout in minutes and export it on the IPFS or as JSON file.
@@ -52,7 +53,7 @@ to check all the checkout created, with the amount collected and being collected
 **Web interface and dashboard for the customers**
 to check the payments sent and being sent to the several buyers/suppliers
 
-For the back-end stack, we will use Solidity as programming language since we will build and deploy on EVM compatible chains such as the ones supported by Chainlink:
+For the back-end stack, we will use Solidity as a programming language since we will build and deploy on EVM-compatible chains such as the ones supported by Chainlink:
 
 Ethereum
 Polygon (Matic)
@@ -63,7 +64,6 @@ Avalanche
 
 Chainlink CCIP
 Chainlink Automation
-Polygon - Polygon ID's Verifiable Credentials to preserve user privacy
 ENS
 The Graph
 
@@ -80,7 +80,7 @@ The Graph
 - Ethereum_Sepolia_LINK: 0x779877A7B0D9E8603169DdbD7836e478b4624789
 - Polygon_Mumbai_USDC: 0x326C977E6efc84E512bB9C30f76E30c160eD06FB
 
-## Polygon Mumbai -> Etherum Spolia USDC
+## Polygon Mumbai -> Etherum Sepolia USDC
 - Etherum_Spolia: 0xBA8F50375DBb23E39d6E6cEA711748beD65c162b LiquidityPool.sol
 - Etherum_Spolia: 0x40a3D31Fe069F6Ca30CDfd8E0CA80c6946E34eb6 DestChainReceiver.sol
 - Polygon_Mumbai: 0x4eb8c2c39BF1baA0850BAb49eeF5A6D874E68b08 SourceChainSender.sol
